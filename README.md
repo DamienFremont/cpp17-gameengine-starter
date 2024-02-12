@@ -64,16 +64,19 @@ cmake -S "projects/all" -B "build"
 
 ### Build everything at once
 
-```powershell
+```bash
+# Build
 cmake -S "projects/all" -B "build"
 ```
 
 ### Build and run the standalone target
 
-```powershell
+```bash
+# Build
 cmake -S "projects/hello" -B "build/hello"
 cmake --build "build/hello"
-./build/hello/Greeter" --help
+# Run
+./build/hello/Debug/Hello
 ```
 
 ### Build and run test suite
