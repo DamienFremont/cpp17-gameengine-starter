@@ -37,19 +37,24 @@
 ### Windows
 
 CMake:
-- Download the `v3.28.3` release of CMake at http://www.cmake.org/download/.
+- Download the `v3.28.3` release of `CMake` at http://www.cmake.org/download/.
 - Pick Windows (`Windows x64 Installer`).
-- Run the installer.
+- Run the installer
 - When asked for, select `Add CMake to the system PATH for all users`.
-- Run software installation.
+- Run software installation...
 
 Visual Studio:
-- Download the `v17 2022` release of Visual Studio at https://visualstudio.microsoft.com/downloads/
-- Run the installer.
-- Run software `Visual Studio installer`
-- click on `modify` under `Visual Studio 2002`
-- select `Universal Windows Platform development`
-- click on `modify`
+- Download the `Community` version of `Visual Studio 2022` release of Visual Studio at https://visualstudio.microsoft.com/downloads/
+- Run the installer...
+- Run software `Visual Studio Installer`
+- When asked for, click on `modify` under `Visual Studio 2002`
+- Select `Desktop development with C++` (contains MVC package)
+- Click on `modify`
+
+PowerShell:
+```powershell
+cmake -S "projects/all" -B "build"
+```
 
 ### Linux
 
@@ -57,13 +62,18 @@ Visual Studio:
 
 ## Usage
 
+### Build everything at once
+
+```powershell
+cmake -S "projects/all" -B "build"
+```
+
 ### Build and run the standalone target
 
-```bash
-cmake -G "Visual Studio 17 2022"
-
-cmake --build . 
-cmake --install .
+```powershell
+cmake -S "projects/hello" -B "build/hello"
+cmake --build "build/hello"
+./build/hello/Greeter" --help
 ```
 
 ### Build and run test suite
@@ -78,9 +88,15 @@ cmake --install .
 
 :x:
 
-### Build everything at once
 
-:x:
+## FAQ
+
+### How do I clean my temp files ?
+
+###
+```bash
+git clean -d -f -x
+```
 
 ## Resources
 

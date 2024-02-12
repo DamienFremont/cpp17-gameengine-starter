@@ -1,10 +1,9 @@
-# Set the minimum version of CMake that can be used
-# To find the cmake version run
-# $ cmake --version
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.28.3)
 
-# Set the project name
-project (hello_cmake)
+project(hello LANGUAGES CXX)
 
-# Add an executable
-add_executable(hello_cmake main.cpp)
+# Create standalone executable
+file(GLOB sources CONFIGURE_DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/source/*.cpp)
+add_executable(${PROJECT_NAME} ${sources})
+set_target_properties(${PROJECT_NAME} PROPERTIES CXX_STANDARD 17 OUTPUT_NAME "Hello")
+# target_link_libraries(${PROJECT_NAME} Hello::Hello cxxopts)
