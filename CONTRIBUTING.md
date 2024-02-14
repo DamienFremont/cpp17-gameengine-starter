@@ -3,12 +3,6 @@
 
 # CONTRIBUTING
 
-## Dependencies
-
-- [SDL 2](https://www.libsdl.org/)
-- [Miniz](https://github.com/richgel999/miniz)
-- [ImGui](https://github.com/ocornut/imgui)
-
 ## CI
 
 ### Sonar

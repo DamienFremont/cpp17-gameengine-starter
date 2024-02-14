@@ -1,7 +1,7 @@
 :warning: WORK IN PROGRESS :warning:
 ====================================
 
-# C++ 17 - Game Engine - Starter
+# C++ 17 - Starter
 
 <p align="center">
   <img src="./docs/thumb-cpp.png" height="175" width="auto" />
@@ -10,6 +10,8 @@
 ## Content
 
 - [Features](#features)
+- [Dependencies](#dependencies)
+- [Screenshots](#screenshots)
 - [Install](#install)
 - [Usage](#usage)
 - [Resources](#resources)
@@ -19,9 +21,9 @@
 ## Features
 
 - Stack
-  - :x: C++17
-  - :x: Standard libraries
-  - :x: Modularity
+  - :heavy_check_mark: C++17
+  - :heavy_check_mark: Standard libraries
+  - :heavy_check_mark: Modularity
 - Targets:
   - :x: x86 Windows
   - :x: x86 linux
@@ -32,6 +34,12 @@
   - :x: Code Analysis (Sonar)
   - :x: Unit Test
   - :x: Auto. Documentation
+
+## Dependencies
+
+- [SDL 2](https://www.libsdl.org/)
+- [Miniz](https://github.com/richgel999/miniz)
+- [ImGui](https://github.com/ocornut/imgui)
 
 ## Screenshots
 
