@@ -20,21 +20,24 @@
 
 - Stack
   - :x: C++17
-  - :x: Modularity (Hexagonal Archi.)
-  - :x: Standard library (STL, SDL, etc)
+  - :x: Standard libraries
+  - :x: Modularity
 - Targets:
   - :x: x86 Windows
   - :x: x86 linux
   - :x: ARMv7 Android
 - CI
   - :heavy_check_mark: CMake
+  - :x: Formatter
   - :x: Code Analysis (Sonar)
   - :x: Unit Test
   - :x: Auto. Documentation
 
 ## Screenshots
 
-:x:
+<p align="center">
+  <img src="./docs/thumb-screenshot.png" height="175" width="auto" />
+</p>
 
 ## Install
 
