@@ -4,7 +4,7 @@
 # C++ 17 - Game Engine - Starter
 
 <p align="center">
-  <img src="./documentation/thumb-cpp.png" height="175" width="auto" />
+  <img src="./docs/thumb-cpp.png" height="175" width="auto" />
 </p>
 
 ## Content
@@ -31,6 +31,10 @@
   - :x: Code Analysis (Sonar)
   - :x: Unit Test
   - :x: Auto. Documentation
+
+## Screenshots
+
+:x:
 
 ## Install
 
@@ -67,6 +71,16 @@ cmake -S "projects/all" -B "build"
 ```bash
 # Build
 cmake -S "projects/all" -B "build"
+cmake --build build
+
+# run tests
+./build/hello_test/Debug/hello_test.exe
+# format code
+cmake --build build --target fix-format
+# run standalone
+./build/standalone/Greeter --help
+# build docs
+cmake --build build --target GenerateDocs
 ```
 
 ### Build and run the standalone target
@@ -76,12 +90,19 @@ cmake -S "projects/all" -B "build"
 cmake -S "projects/hello" -B "build/hello"
 cmake --build "build/hello"
 # Run
-./build/hello/Debug/Hello
+./build/hello/Debug/hello.exe
 ```
 
 ### Build and run test suite
 
-:x:
+```bash
+cmake -S "projects/hello_test" -B "build/hello_test"
+cmake --build "build/hello_test"
+cmake --build "build/hello_test" --target "hello_test"
+
+# or simply call the executable: 
+./build/hello_test/Debug/hello_test.exe
+```
 
 ### Run clang-format
 

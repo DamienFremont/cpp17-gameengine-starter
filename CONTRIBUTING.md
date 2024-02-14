@@ -3,26 +3,35 @@
 
 # CONTRIBUTING
 
-## Install
+## Dependencies
 
-### Windows
+- [SDL 2](https://www.libsdl.org/)
+- [Miniz](https://github.com/richgel999/miniz)
+- [ImGui](https://github.com/ocornut/imgui)
 
-```powershell
-# (Windows powershell)
+## CI
 
-# Dev folder
-New-Item -Path "c:\" -Name "dev" -ItemType "directory"
+### Sonar
 
-# CMake
-# download
-Start-BitsTransfer -Source "https://github.com/Kitware/CMake/releases/download/v3.28.3/cmake-3.28.3-windows-x86_64.zip" -Destination "C:\dev\"
-# unpack
-Expand-Archive "C:\dev\cmake-3.28.3-windows-x86_64.zip" -DestinationPath "C:\dev\"
-# set env var
-# user
-[Environment]::SetEnvironmentVariable("Path", $env:Path + ";" + "C:\dev\cmake-3.28.3-windows-x86_64\bin", "User")
-# test
-$Env:Path += ';' + "C:\dev\cmake-3.28.3-windows-x86_64\bin"
-cmake --version
-# output: "cmake version 3.28.3"
+```bash
+# install
+docker pull library/sonarqube:10.4.0-community
+docker pull sonarsource/sonar-scanner-cli:5.0.1
+docker run -d --name sonarqube -p 9000:9000 sonarqube
+# security
+# (http://localhost:9000 > sonar menu > 'my account' > 'security' > 'type:globa'l > 'generate' > copy token value)
+
+# usage: scan with docker
+docker run -it --rm --net=host -e SONAR_SCANNER_OPTS="-Dsonar.projectKey=cpp17-gameengine-starter" -e SONAR_TOKEN="sqa_9e2523111bc7c5fc8c1d5109c10df039447b3ec2" -v ".:/usr/src" sonarsource/sonar-scanner-cli
+
+# result
+# http://localhost:9000/dashboard?id=cpp17-gameengine-starter
 ```
+
+## Resources
+
+- Sonarqube
+  - [SonarScanner CLI](https://docs.sonarsource.com/sonarqube/latest/analyzing-source-code/scanners/sonarscanner/)
+- GitHub
+  - [sonar-cxx ](https://github.com/SonarOpenCommunity/sonar-cxx)
+  - 
