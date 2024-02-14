@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.28.3)
 
-project(02_getting_an_image_on_the_screen LANGUAGES CXX)
+project(desktop LANGUAGES CXX)
 
 # ---- Dependencies ----
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../include/SDL2)
@@ -11,7 +11,7 @@ add_executable(${PROJECT_NAME} WIN32 ${SOURCES})
 set_target_properties(${PROJECT_NAME} PROPERTIES
   WIN32_EXECUTABLE ON 
   CXX_STANDARD 17 
-  OUTPUT_NAME "02_getting_an_image_on_the_screen"
+  OUTPUT_NAME "desktop"
 )
 
 # ---- Dependencies ----

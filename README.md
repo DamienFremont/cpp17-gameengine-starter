@@ -60,7 +60,7 @@ Visual Studio:
 
 PowerShell:
 ```powershell
-cmake -S "projects/all" -B "build"
+cmake -S "modules/all" -B "build"
 ```
 
 ### Linux
@@ -73,39 +73,31 @@ cmake -S "projects/all" -B "build"
 
 ```bash
 # Build
-cmake -S "projects/all" -B "build"
+cmake -S "modules/all" -B "build"
 cmake --build build
 
 # run tests
-./build/hello_test/Debug/hello_test.exe
+./build/console_test/Debug/console_test.exe
 # format code
 cmake --build build --target fix-format
 # run standalone
-./build/standalone/Greeter --help
-# build docs
-cmake --build build --target GenerateDocs
+./build/console/Debug/console.exe
+./build/desktop/Debug/desktop.exe
 ```
 
 ### Build and run the standalone target
 
 ```bash
 # Build
-cmake -S "projects/hello" -B "build/hello"
-cmake --build "build/hello"
+cmake -S "modules/console" -B "build/console"
+cmake --build "build/console"
 # Run
-./build/hello/Debug/hello.exe
+./build/console/Debug/console.exe
 ```
 
 ### Build and run test suite
 
-```bash
-cmake -S "projects/hello_test" -B "build/hello_test"
-cmake --build "build/hello_test"
-cmake --build "build/hello_test" --target "hello_test"
-
-# or simply call the executable: 
-./build/hello_test/Debug/hello_test.exe
-```
+:x:
 
 ### Run clang-format
 
@@ -115,12 +107,10 @@ cmake --build "build/hello_test" --target "hello_test"
 
 :x:
 
-
 ## FAQ
 
 ### How do I clean my temp files ?
 
-###
 ```bash
 git clean -d -f -x
 ```
