@@ -4,6 +4,8 @@
 #include <SDL.h>
 #include <stdio.h>
 
+#include "core.cpp" 
+
 //Screen dimension constants
 const int SCREEN_WIDTH = 640;
 const int SCREEN_HEIGHT = 480;
@@ -88,6 +90,7 @@ void close()
 
 int start(int argc, char *argv[])
 {
+	hello();
 	//Start up SDL and create window
 	if( !init() )
 	{

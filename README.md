@@ -88,11 +88,7 @@ cmake -S "modules/all" -B "build"
 cmake -S "all" -B "build"
 cmake --build build
 
-# run tests
-./build/console_test/Debug/console_test.exe
-# format code
-cmake --build build --target fix-format
-# run standalone
+# run standalones
 ./build/server_win32_x64/Debug/server_win32_x64.exe
 ./build/desktop_win32_x64/Debug/desktop_win32_x64.exe
 ```
@@ -103,8 +99,6 @@ cmake --build build --target fix-format
 # Build
 cmake -S "modules/server" -B "build/server"
 cmake --build "build/server"
-# Run
-./build/server/Debug/server.exe
 ```
 
 ### Build and run test suite

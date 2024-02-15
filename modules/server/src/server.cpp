@@ -1,20 +1,10 @@
 #include "server.h" 
 
 #include <iostream>
+#include "core.cpp" 
 
 int start(int argc, char *argv[])
 {
-   std::cout << "Hello World!" << std::endl;
-   std::cout << "Hello World!" << std::endl;
-   std::cout << "Hello World!" << std::endl;
-   std::cout << "Hello World!" << std::endl;
-   std::cout << "Hello World!" << std::endl;
-   std::cout << "Hello World!" << std::endl;
-   std::cout << "Hello World!" << std::endl;
-   std::cout << "Hello World!" << std::endl;
-   std::cout << "Hello World!" << std::endl;
-   std::cout << "Hello World!" << std::endl;
-   std::cout << "Hello World!" << std::endl;
-   std::cout << "Hello World!" << std::endl;
+   hello();
    return 0;
 }
