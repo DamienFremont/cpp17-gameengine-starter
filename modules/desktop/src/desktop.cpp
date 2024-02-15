@@ -1,9 +1,4 @@
-/*This source code copyrighted by Lazy Foo' Productions 2004-2024
-and may not be redistributed without written permission.*/
-
-#ifdef _WIN32
-#include <windows.h>
-#endif
+#include "desktop.h" 
 
 //Using SDL and standard IO
 #include <SDL.h>
@@ -91,16 +86,7 @@ void close()
 	SDL_Quit();
 }
 
-#ifdef _WIN32
-int APIENTRY WinMain(HINSTANCE hInstance,
-    HINSTANCE hPrevInstance,
-    LPSTR lpCmdLine, int nCmdShow)
-{
-    return main(__argc, __argv);
-}
-#endif
-
-int main(int argc, char *argv[])
+int start(int argc, char *argv[])
 {
 	//Start up SDL and create window
 	if( !init() )

@@ -85,7 +85,7 @@ cmake -S "modules/all" -B "build"
 
 ```bash
 # Build
-cmake -S "modules/all" -B "build"
+cmake -S "all" -B "build"
 cmake --build build
 
 # run tests
@@ -93,18 +93,18 @@ cmake --build build
 # format code
 cmake --build build --target fix-format
 # run standalone
-./build/console/Debug/console.exe
-./build/desktop/Debug/desktop.exe
+./build/server_win32_x64/Debug/server_win32_x64.exe
+./build/desktop_win32_x64/Debug/desktop_win32_x64.exe
 ```
 
 ### Build and run the standalone target
 
 ```bash
 # Build
-cmake -S "modules/console" -B "build/console"
-cmake --build "build/console"
+cmake -S "modules/server" -B "build/server"
+cmake --build "build/server"
 # Run
-./build/console/Debug/console.exe
+./build/server/Debug/server.exe
 ```
 
 ### Build and run test suite
