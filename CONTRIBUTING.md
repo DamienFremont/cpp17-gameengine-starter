@@ -1,5 +1,5 @@
-:warning: WORK IN PROGRESS :warning:
-====================================
+:warning: WORK IN PROGRESS
+==========================
 
 # CONTRIBUTING
 

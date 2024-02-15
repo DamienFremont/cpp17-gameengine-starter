@@ -1,10 +1,10 @@
-:warning: WORK IN PROGRESS :warning:
-====================================
+:warning: WORK IN PROGRESS
+==========================
 
 # C++ 17 - Starter
 
 <p align="center">
-  <img src="./docs/thumb-cpp.png" height="175" width="auto" />
+  <img src="./docs/README-thumb-cpp.png" height="175" width="auto" />
 </p>
 
 ## Content
@@ -44,8 +44,12 @@
 ## Screenshots
 
 <p align="center">
-  <img src="./docs/thumb-screenshot.png" height="175" width="auto" />
+  <img src="./docs/README-thumb-screenshot.png" height="175" width="auto" />
 </p>
+
+![alt text](./docs/README-diagrams-1.png)
+
+![alt text](./docs/README-diagrams-2.png)
 
 ## Install
 

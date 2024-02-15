@@ -11,5 +11,8 @@ cmake_install.cmake
 *.vcxproj.*
 *.sln
 
+# VSC
+.vscode
+
 # Sonar
 .scannerwork
