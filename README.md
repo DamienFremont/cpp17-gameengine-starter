@@ -85,20 +85,20 @@ cmake -S "modules/all" -B "build"
 
 ```bash
 # Build
-cmake -S "all" -B "build"
+cmake -S "modules/all" -B "build"
 cmake --build build
 
 # run standalones
-./build/server_win32_x64/Debug/server_win32_x64.exe
-./build/desktop_win32_x64/Debug/desktop_win32_x64.exe
+./build/standalone_server_win32_x64/Debug/standalone_server_win32_x64.exe
+./build/standalone_desktop_win32_x64/Debug/standalone_desktop_win32_x64.exe
 ```
 
 ### Build and run the standalone target
 
 ```bash
 # Build
-cmake -S "modules/server" -B "build/server"
-cmake --build "build/server"
+cmake -S "modules/module_server" -B "build/module_server"
+cmake --build "build/module_server"
 ```
 
 ### Build and run test suite

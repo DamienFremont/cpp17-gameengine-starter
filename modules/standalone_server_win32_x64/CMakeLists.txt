@@ -1,10 +1,10 @@
 cmake_minimum_required(VERSION 3.28.3)
 
-project(server_win32_x64 LANGUAGES CXX)
+project(standalone_server_win32_x64 LANGUAGES CXX)
 
 # ---- Dependencies ----
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../modules/core/src)
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../modules/server/src)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../module_core/src)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../module_server/src)
 
 # ---- Create standalone executable ---- 
 file(GLOB SOURCES CONFIGURE_DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp)
