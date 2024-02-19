@@ -1,5 +1,5 @@
 #include <windows.h>
-#include <desktop.cpp>
+#include <desktop.h>
 
 int APIENTRY WinMain(HINSTANCE hInstance,
     HINSTANCE hPrevInstance,

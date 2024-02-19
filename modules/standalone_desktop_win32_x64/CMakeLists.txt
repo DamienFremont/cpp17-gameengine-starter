@@ -2,13 +2,24 @@ cmake_minimum_required(VERSION 3.28.3)
 
 project(standalone_desktop_win32_x64 LANGUAGES CXX)
 
-# ---- Dependencies ----
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../module_core/src)
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../module_desktop/src)
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../lib_SDL2/include)
+# ---- Dependencies Sources ----
+include_directories(
+  ${PROJECT_SOURCE_DIR}/src
+  ${PROJECT_SOURCE_DIR}/../module_desktop/include
+  ${PROJECT_SOURCE_DIR}/../module_desktop/src
+    ${PROJECT_SOURCE_DIR}/../module_core/include
+    ${PROJECT_SOURCE_DIR}/../module_core/src
+  ${CMAKE_CURRENT_SOURCE_DIR}/../lib_SDL2/include
+)
+file(GLOB SOURCES
+  "${PROJECT_SOURCE_DIR}/src/*.cpp"
+  "${PROJECT_SOURCE_DIR}/../module_desktop/include/*.h"
+  "${PROJECT_SOURCE_DIR}/../module_desktop/src/*.cpp"
+    "${PROJECT_SOURCE_DIR}/../module_core/include/*.h"
+    "${PROJECT_SOURCE_DIR}/../module_core/src/*.cpp"
+)
 
 # ---- Create standalone executable ---- 
-file(GLOB SOURCES CONFIGURE_DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp)
 add_executable(${PROJECT_NAME} WIN32 ${SOURCES})
 set_target_properties(${PROJECT_NAME} PROPERTIES
   WIN32_EXECUTABLE ON 

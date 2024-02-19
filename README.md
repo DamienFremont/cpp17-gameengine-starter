@@ -125,3 +125,5 @@ git clean -d -f -x
 
 - Github
   - [ModernCppStarter](https://github.com/TheLartians/ModernCppStarter/tree/master)
+- Stackoverflow.com
+  - [CMake with include and source paths - basic setup](https://stackoverflow.com/questions/8304190/cmake-with-include-and-source-paths-basic-setup)

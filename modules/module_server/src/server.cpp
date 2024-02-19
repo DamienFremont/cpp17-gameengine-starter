@@ -1,7 +1,7 @@
 #include "server.h" 
 
 #include <iostream>
-#include "core.cpp" 
+#include "core.h" 
 
 int start(int argc, char *argv[])
 {
