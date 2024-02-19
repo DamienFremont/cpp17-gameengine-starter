@@ -1,7 +1,7 @@
 :warning: WORK IN PROGRESS
 ==========================
 
-# C++ 17 - Starter
+# C++ 2020 - Monorepo - Starter
 
 <p align="center">
   <img src="./docs/README-thumb-cpp.png" height="175" width="auto" />
@@ -146,3 +146,6 @@ git clean -d -f -x
   - [ModernCppStarter](https://github.com/TheLartians/ModernCppStarter/tree/master)
 - Stackoverflow.com
   - [CMake with include and source paths - basic setup](https://stackoverflow.com/questions/8304190/cmake-with-include-and-source-paths-basic-setup)
+- Monorepo examples
+  - [How to structure a monorepo](https://lucapette.me/writing/how-to-structure-a-monorepo/?utm_source=atom_feed)
+  - [A monorepo template that actually works](https://levelup.gitconnected.com/a-monorepo-template-that-actually-works-3efd87770fa5)

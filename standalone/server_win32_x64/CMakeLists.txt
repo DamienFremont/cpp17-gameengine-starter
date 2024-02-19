@@ -26,6 +26,6 @@ file(GLOB SOURCES
 # ---- Create standalone executable ---- 
 add_executable(${PROJECT_NAME} ${SOURCES})
 set_target_properties(${PROJECT_NAME} PROPERTIES 
-  CXX_STANDARD 17 
+  CXX_STANDARD 20 
   OUTPUT_NAME ${PROJECT_NAME}
 )
