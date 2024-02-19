@@ -21,7 +21,7 @@
 ## Features
 
 - Stack
-  - :heavy_check_mark: C++17
+  - :heavy_check_mark: C++20
   - :heavy_check_mark: Standard libraries
   - :heavy_check_mark: Modularity
 - Targets:
