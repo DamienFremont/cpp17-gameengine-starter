@@ -94,6 +94,36 @@ PowerShell:
 cmake -S "." -B "build" -G "Visual Studio 17 2022"
 ```
 
+VS Code:
+
+.vscode/c_cpp_properties.json:
+```json
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/platform/core/include",
+                "${workspaceFolder}/platform/server/include",
+                "${workspaceFolder}/platform/desktop/include"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "windowsSdkVersion": "10.0.22621.0",
+            "compilerPath": "cl.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++20",
+            "intelliSenseMode": "windows-msvc-x64"
+        }
+    ],
+    "version": 4
+}
+```
+
 ### Linux
 
 :x:
@@ -112,12 +142,12 @@ cmake --build build
 ./build/desktop_win32_x64/Debug/desktop_win32_x64.exe
 ```
 
-### Build and run the standalone target
+### Build and run a standalone target
 
 ```bash
 # Build
-cmake -S "plateform/server" -B "build/server"
-cmake --build "build/server"
+cmake -S "standalone/desktop_win32_x64" -B "build/desktop_win32_x64"
+cmake --build "build/desktop_win32_x64"
 ```
 
 ### Build and run test suite
