@@ -36,5 +36,5 @@ set_target_properties(${PROJECT_NAME} PROPERTIES
 target_link_libraries(${PROJECT_NAME} ${LIB}/SDL2/x64/SDL2)
 
 # ---- Bundle ----
-file(COPY ${ASSETS}/background DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/Debug/assets/)
+file(COPY ${ASSETS}/images DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/Debug/assets/)
 file(COPY ${LIB}/SDL2/x64/SDL2.dll DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/Debug)

@@ -51,6 +51,25 @@
 
 ![alt text](./docs/README-diagrams-2.png)
 
+Your monorepo looks very different now:
+```
+├── assets
+│   ├── i18n
+│   └── images
+├── docs
+├── infra
+├── lib
+│   ├── SDL2
+├── platform
+│   ├── core
+│   ├── server
+│   └── desktop
+├── standalone
+│   ├── desktop_win32_x64
+│   └── server_win32_x64
+└── tools
+```
+
 ## Install
 
 ### Windows
